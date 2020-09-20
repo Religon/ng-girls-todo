@@ -28,6 +28,6 @@ export class ListManagerComponent implements OnInit {
 
   // tslint:disable-next-line:typedef
   addItem(title: string) {
-    this.todoList.push({ title });
+    this.todoListService.addItem({ title });
   }
 }
