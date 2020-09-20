@@ -5,8 +5,8 @@ import { Component, OnInit } from '@angular/core';
   template: `
     <input #inputElementRef
           [value]="title"
-          (keyup.enter)="changeTitle($event.target.value)">
-  <button (click)="changeTitle(inputElementRef.value)">
+          (keyup.enter)="changeTitle(inputElementRef)">
+  <button (click)="changeTitle(inputElementRef)">
     Save
   </button>
   `,
@@ -22,8 +22,9 @@ export class InputButtonUnitComponent implements OnInit {
   }
 
   // tslint:disable-next-line:typedef
-  changeTitle(newTitle: string) {
-    this.title = newTitle;
+  changeTitle(inputElementReference) {
+    console.log(inputElementReference);
+    this.title = inputElementReference.value;
   }
 
 }
