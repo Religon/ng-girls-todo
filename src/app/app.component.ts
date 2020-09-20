@@ -15,6 +15,8 @@ import { TodoItem } from './interfaces/todo-item';
     <app-todo-item [item]="todoItem"></app-todo-item>
     </li>
   </ul>
+
+  <app-list-manager></app-list-manager>
 `,
   styleUrls: ['./app.component.scss']
 })
